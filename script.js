@@ -12,10 +12,9 @@ setInterval(() => {
     let min_dot = document.querySelector('.min_dot');
     let sec_dot = document.querySelector('.sec_dot');
     
-    let now = new Date();
-    let h = now.getHours();
-    let m = now.getMinutes();
-    let s = now.getSeconds();    
+    let h = new Date().getHours();
+    let m = new Date().getMinutes();
+    let s = new Date().getSeconds();
     let am = "AM";
     if (h >= 12) am = "PM";
     
