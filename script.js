@@ -12,10 +12,13 @@ setInterval(() => {
     let min_dot = document.querySelector('.min_dot');
     let sec_dot = document.querySelector('.sec_dot');
     
-    let h = new Date().getHours();
-    let m = new Date().getMinutes();
-    let s = new Date().getSeconds();
-    let am = h >= 12 ? "PM" : "AM";
+    let now = new Date();
+    let h = now.getHours();
+    let m = now.getMinutes();
+    let s = now.getSeconds();    
+    let am = "AM";
+    if (h >= 12) am = "PM";
+    
   
     // convert 24hr clock to 12hr clock
     if (h > 12) {
